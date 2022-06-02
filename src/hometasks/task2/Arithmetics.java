@@ -7,13 +7,13 @@ public class Arithmetics {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Введите первое число = ");
+        System.out.print("Р’РІРµРґРёС‚Рµ РїРµСЂРІРѕРµ С‡РёСЃР»Рѕ = ");
         int a = input.nextInt();
 
-        System.out.print("Введите второе число = ");
+        System.out.print("Р’РІРµРґРёС‚Рµ РІС‚РѕСЂРѕРµ С‡РёСЃР»Рѕ = ");
         int b = input.nextInt();
 
-        System.out.print("ЗВведите арифметический знак: ");
+        System.out.print("Р—Р’РІРµРґРёС‚Рµ Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРёР№ Р·РЅР°Рє: ");
         String sign = input.next();
 
         switch (sign) {
@@ -30,7 +30,7 @@ public class Arithmetics {
                 div(a, b);
                 break;
             default:
-                System.out.println("Не известный арифметический знак!");
+                System.out.println("РќРµ РёР·РІРµСЃС‚РЅС‹Р№ Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРёР№ Р·РЅР°Рє!");
         }
 
     }
@@ -49,7 +49,7 @@ public class Arithmetics {
 
     static void div(int a, int b) {
         if (b == 0) {
-            System.out.println("Деление на 0 запрещено!");
+            System.out.println("Р”РµР»РµРЅРёРµ РЅР° 0 Р·Р°РїСЂРµС‰РµРЅРѕ!");
             return;
         }
         System.out.printf(a + " / " + b + " = %.2f", (double) a / b);

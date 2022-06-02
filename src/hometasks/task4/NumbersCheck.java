@@ -7,7 +7,7 @@ public class NumbersCheck {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Введите число = ");
+        System.out.print("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ = ");
         int a = input.nextInt();
 
         checkPN(a);
@@ -18,9 +18,9 @@ public class NumbersCheck {
     static void checkPN(int a) {
 
         if (a >= 0) {
-            System.out.println("Введенное число положительное.");
+            System.out.println("Р’РІРµРґРµРЅРЅРѕРµ С‡РёСЃР»Рѕ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ.");
         } else {
-            System.out.println("Введенное число отрицательное");
+            System.out.println("Р’РІРµРґРµРЅРЅРѕРµ С‡РёСЃР»Рѕ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅРѕРµ");
         }
 
     }
@@ -28,24 +28,24 @@ public class NumbersCheck {
     static void checkSimple(int a) {
 
         if (a % 2 == 0) {
-            System.out.println("Число не простое");
+            System.out.println("Р§РёСЃР»Рѕ РЅРµ РїСЂРѕСЃС‚РѕРµ");
             return;
         }
 
         for (int i = 3; i <= Math.sqrt(a); i += 2) {
             if (a % i == 0) {
-                System.out.println("Число не простое");
+                System.out.println("Р§РёСЃР»Рѕ РЅРµ РїСЂРѕСЃС‚РѕРµ");
                 return;
             }
         }
-        System.out.println("Число простое");
+        System.out.println("Р§РёСЃР»Рѕ РїСЂРѕСЃС‚РѕРµ");
     }
 
     private static void checkDiv(int a) {
         if ((a % 2 == 0) && (a % 5 == 0) && (a % 3 == 0) && (a % 6 == 0) && (a % 9 == 0)) {
-            System.out.println("Число делится без остатка");
+            System.out.println("Р§РёСЃР»Рѕ РґРµР»РёС‚СЃСЏ Р±РµР· РѕСЃС‚Р°С‚РєР°");
         } else {
-            System.out.println("Число не делится без остатка");
+            System.out.println("Р§РёСЃР»Рѕ РЅРµ РґРµР»РёС‚СЃСЏ Р±РµР· РѕСЃС‚Р°С‚РєР°");
         }
     }
 

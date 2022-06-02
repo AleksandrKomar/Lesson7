@@ -14,34 +14,34 @@ public class Conversion {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Выберите валюту, в которую хотите поменять: гривны, доллары или евро" + "\n" + "Введите H, D или E");
+        System.out.println("Р’С‹Р±РµСЂРёС‚Рµ РІР°Р»СЋС‚Сѓ, РІ РєРѕС‚РѕСЂСѓСЋ С…РѕС‚РёС‚Рµ РїРѕРјРµРЅСЏС‚СЊ: РіСЂРёРІРЅС‹, РґРѕР»Р»Р°СЂС‹ РёР»Рё РµРІСЂРѕ" + "\n" + "Р’РІРµРґРёС‚Рµ H, D РёР»Рё E");
         String currency = sc.next();
 
-        System.out.println("Выберите валюту конвертации: гривны, доллары или евро" + "\n" + "Введите H, D или E");
+        System.out.println("Р’С‹Р±РµСЂРёС‚Рµ РІР°Р»СЋС‚Сѓ РєРѕРЅРІРµСЂС‚Р°С†РёРё: РіСЂРёРІРЅС‹, РґРѕР»Р»Р°СЂС‹ РёР»Рё РµРІСЂРѕ" + "\n" + "Р’РІРµРґРёС‚Рµ H, D РёР»Рё E");
         String convCurrency = sc.next();
 
-        System.out.println("Введите сумму:");
+        System.out.println("Р’РІРµРґРёС‚Рµ СЃСѓРјРјСѓ:");
         double money = sc.nextDouble();
 
         if (money < 0) {
-            System.out.println("Отрицательная сумма запрещена. Повторите.");
+            System.out.println("РћС‚СЂРёС†Р°С‚РµР»СЊРЅР°СЏ СЃСѓРјРјР° Р·Р°РїСЂРµС‰РµРЅР°. РџРѕРІС‚РѕСЂРёС‚Рµ.");
             return;
         }
 
         if ((currency.equals("h") || currency.equals("H")) && (convCurrency.equals("d") || convCurrency.equals("D"))) {
-            System.out.printf("Конвертация гривны в доллары : %.2f $", convUAHToUSD(money, UAH_to_USD));
+            System.out.printf("РљРѕРЅРІРµСЂС‚Р°С†РёСЏ РіСЂРёРІРЅС‹ РІ РґРѕР»Р»Р°СЂС‹ : %.2f $", convUAHToUSD(money, UAH_to_USD));
         } else if ((currency.equals("h") || currency.equals("H")) && (convCurrency.equals("e") || convCurrency.equals("E"))) {
-            System.out.printf("Конвертация гривны в евро : %.2f €", convUAHToEUR(money, UAH_to_EUR));
+            System.out.printf("РљРѕРЅРІРµСЂС‚Р°С†РёСЏ РіСЂРёРІРЅС‹ РІ РµРІСЂРѕ : %.2f в‚¬", convUAHToEUR(money, UAH_to_EUR));
         } else if ((currency.equals("d") || currency.equals("D")) && (convCurrency.equals("h") || convCurrency.equals("H"))) {
-            System.out.printf("Конвертация доллары в гривны : %.2f UAH", convUSDtoUAH(money, USD_to_UAH));
+            System.out.printf("РљРѕРЅРІРµСЂС‚Р°С†РёСЏ РґРѕР»Р»Р°СЂС‹ РІ РіСЂРёРІРЅС‹ : %.2f UAH", convUSDtoUAH(money, USD_to_UAH));
         } else if ((currency.equals("d") || currency.equals("D")) && (convCurrency.equals("e") || convCurrency.equals("E"))) {
-            System.out.printf("Конвертация доллары в евро : %.2f €", convUSDtoEUR(money, USD_to_EUR));
+            System.out.printf("РљРѕРЅРІРµСЂС‚Р°С†РёСЏ РґРѕР»Р»Р°СЂС‹ РІ РµРІСЂРѕ : %.2f в‚¬", convUSDtoEUR(money, USD_to_EUR));
         } else if ((currency.equals("e") || currency.equals("E")) && (convCurrency.equals("h") || convCurrency.equals("H"))) {
-            System.out.printf("Конвертация евро в гривны : %.2f UAH", convEURtoUAH(money, EUR_to_UAH));
+            System.out.printf("РљРѕРЅРІРµСЂС‚Р°С†РёСЏ РµРІСЂРѕ РІ РіСЂРёРІРЅС‹ : %.2f UAH", convEURtoUAH(money, EUR_to_UAH));
         } else if ((currency.equals("e") || currency.equals("E")) && (convCurrency.equals("d") || convCurrency.equals("D"))) {
-            System.out.printf("Конвертация евро в доллары : %.2f €", convEURtoUSD(money, EUR_to_USD));
+            System.out.printf("РљРѕРЅРІРµСЂС‚Р°С†РёСЏ РµРІСЂРѕ РІ РґРѕР»Р»Р°СЂС‹ : %.2f в‚¬", convEURtoUSD(money, EUR_to_USD));
         } else {
-            System.out.println("Выбранная валюта отсутсвует.");
+            System.out.println("Р’С‹Р±СЂР°РЅРЅР°СЏ РІР°Р»СЋС‚Р° РѕС‚СЃСѓС‚СЃРІСѓРµС‚.");
         }
     }
 
