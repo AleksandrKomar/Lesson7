@@ -31,6 +31,7 @@ public class Arithmetics {
                 break;
             default:
                 System.out.println("Не известный арифметический знак!");
+                break;
         }
 
     }
